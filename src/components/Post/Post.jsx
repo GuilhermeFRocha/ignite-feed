@@ -1,3 +1,4 @@
+import { Comment } from "../Comment/Comment";
 import styles from "./Post.module.css";
 
 export const Post = () => {
@@ -33,6 +34,12 @@ export const Post = () => {
         <button type="submit">Publicar</button>
         </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
      </article>
     );
 };
