@@ -13,7 +13,7 @@ export const App = () => {
       <Header />
 
       <div className={styles.wrapper}>
-        <Sidebar/>
+        <Sidebar />
 
         <main>
           <Post infos={"testes"} />
