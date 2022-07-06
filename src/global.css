@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --white: #fff;
     --gray-100: #e1e1e6;
@@ -12,10 +18,9 @@
     --green-500: #00875f;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:focus {
+    outline: transparent;
+    box-shadow:  0 0 0 2px var(--green-500);
 }
 
 body {
