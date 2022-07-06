@@ -1,18 +1,24 @@
-import React from 'react';
-import { Post } from './Post';
+// Components
+import { Post } from "./components/Post/Post";
+import { Header } from "./components/Header/Header";
+import { Sidebar } from "./components/Sidebar/Sidebar";
 
-import { Header } from './components/Header';
-import './global.css';
-
+// Styles
+import styles from "./App.module.css";
+import "./global.css";
 
 export const App = () => {
-
   return (
-    
     <div>
-      <Header/>
+      <Header />
 
-      <Post infos={'testes'}/>
+      <div className={styles.wrapper}>
+        <Sidebar/>
+
+        <main>
+          <Post infos={"testes"} />
+        </main>
+      </div>
     </div>
   );
 };

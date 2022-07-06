@@ -1,9 +1,11 @@
+// Styles
 import styles from './Header.module.css';
+import igniteLogo from '../../assets/ignite_logo.svg'
 
 export const Header = () => {
   return (      
    <header className={styles.header}>
-      <h1>Header</h1>
+      <img src={igniteLogo} alt="Logo" />
    </header>
   ) 
 }
