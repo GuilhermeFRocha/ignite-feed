@@ -1,8 +1,13 @@
-import styles from "./Comment.module.css";
-import { ThumbsUp, Trash } from "phosphor-react";
+// Components
 import { Avatar } from "../Avatar/Avatar";
 
-export const Comment = () => {
+// Libs
+import { ThumbsUp, Trash } from "phosphor-react";
+
+// Styles
+import styles from "./Comment.module.css";
+
+export const Comment = ({ content }) => {
   return (
     <div className={styles.comment}>
       <Avatar
@@ -25,7 +30,7 @@ export const Comment = () => {
               <Trash size={24} />
             </button>
           </header>
-          <p>muito bom</p>
+          <p>{content}</p>
         </div>
 
         <footer>
@@ -37,4 +42,4 @@ export const Comment = () => {
       </div>
     </div>
   );
-};
+}; 
