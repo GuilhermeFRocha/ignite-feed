@@ -88,7 +88,9 @@ export const Post = ({ allPosts }) => {
             required
           />
           <footer>
-          <button disabled={desc === ''} className={styles.btn}  type="submit">Publicar</button>
+            <button disabled={desc === ""} className={styles.btn} type="submit">
+              Publicar
+            </button>
           </footer>
         </form>
 
