@@ -53,7 +53,7 @@ export const App = () => {
         <Sidebar />
 
         <main>
-          <Post allPosts={posts} />
+          <Post allPosts={posts}/>
         </main>
       </div>
     </div>

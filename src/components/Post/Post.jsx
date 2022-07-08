@@ -59,7 +59,7 @@ export const Post = ({ allPosts }) => {
               return <p key={item.content}>{item.content}</p>;
             } else if (item.type === "link") {
               return (
-                <p>
+                <p key={item.content}>
                   <a key={item.content} href="#">
                     {item.content}
                   </a>
@@ -79,13 +79,15 @@ export const Post = ({ allPosts }) => {
             value={desc}
           />
           <footer>
-            <button type="submit">Publicar</button>
+            {desc !== "" ? (
+              <button type="submit">Publicar</button>
+            ) : ( <button type="submit" className={styles.btn} disabled>Publicar</button> )}
           </footer>
         </form>
 
         <div className={styles.commentList}>
           {comment.map((comment) => {
-            return <Comment content={comment} />;
+            return <Comment content={comment} key={comment}/>;
           })}
         </div>
       </article>
