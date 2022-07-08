@@ -34,6 +34,14 @@ export const Post = ({ allPosts }) => {
       setDesc("");
     }
 
+    function deleteComment(commentToDelete) {
+      const commentsWithoutDeletedOne = comment.filter((comments) => {
+        return comments !== commentToDelete;
+      });
+
+      setComment(commentsWithoutDeletedOne);
+    }
+
     return (
       <article className={styles.post} key={post.id}>
         <header>
@@ -81,13 +89,23 @@ export const Post = ({ allPosts }) => {
           <footer>
             {desc !== "" ? (
               <button type="submit">Publicar</button>
-            ) : ( <button type="submit" className={styles.btn} disabled>Publicar</button> )}
+            ) : (
+              <button type="submit" className={styles.btn} disabled>
+                Publicar
+              </button>
+            )}
           </footer>
         </form>
 
         <div className={styles.commentList}>
           {comment.map((comment) => {
-            return <Comment content={comment} key={comment}/>;
+            return (
+              <Comment
+                content={comment}
+                key={comment}
+                onDeleteComment={deleteComment}
+              />
+            );
           })}
         </div>
       </article>
