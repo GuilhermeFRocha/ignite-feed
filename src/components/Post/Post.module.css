@@ -109,6 +109,10 @@
   background: var(--green-300);
 }
 
+.commentForm .btn:disabled {
+  opacity: 0.5;
+}
+
 .commentForm .btn:disabled:hover {
   cursor: no-drop;
 }

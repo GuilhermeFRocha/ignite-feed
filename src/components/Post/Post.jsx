@@ -85,15 +85,10 @@ export const Post = ({ allPosts }) => {
             }}
             placeholder="Deixe um comentario"
             value={desc}
+            required
           />
           <footer>
-            {desc !== "" ? (
-              <button type="submit">Publicar</button>
-            ) : (
-              <button type="submit" className={styles.btn} disabled>
-                Publicar
-              </button>
-            )}
+          <button disabled={desc === ''} className={styles.btn}  type="submit">Publicar</button>
           </footer>
         </form>
 
